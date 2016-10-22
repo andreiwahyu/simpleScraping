@@ -34,7 +34,7 @@ function run(e){
     console.info($($('.next_link')[0]).attr('href'));
     next($($('.next_link')[0]).attr('href'));
   }else{
-    fs.writeFile("data.txt", JSON.stringify(data), function(err) {
+    fs.writeFile("data.txt", JSON.stringify(data,null,2), function(err) {
     if(err) {
         return console.log(err);
     }
